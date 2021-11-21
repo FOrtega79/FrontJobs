@@ -15,3 +15,26 @@ h1 {
 .btn-primary{
   margin-left:450px;
 }
+.btn-apply{
+  background-color: #00b7ff;
+  padding: 5px 20px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.btn-save{
+  background-color:green;
+  padding: 5px 20px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.adz-mini{
+  width: 50px;
+}
+
+footer{
+  margin-top: 100px;
+}

@@ -1,1 +1,12 @@
-<h2>aquí van las ofertas</h2>
+<h2>Job list...</h2>
+
+{{#each offersInfo}}
+<h3>{{this.title}}</h3>
+<h5>Source: {{this.company.display_name}}</h5>
+<p>Location: {{this.location.display_name}} | Published:{{this.created}}</p>
+<p>Salary: {{this.salary_min}} - {{this.salary_max}}</p>
+<p>Description: {{this.description}} </p>
+<a href={{this.redirect_url}} target="_blank" ><button class="btn-apply">Apply</button></a>
+<a href=# target="_blank" ><button class="btn-save">Save for later</button></a>
+
+{{/each}}
