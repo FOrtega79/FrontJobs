@@ -15,6 +15,22 @@ h1 {
 .btn-primary{
   margin-left:450px;
 }
+
+/* Index ------------------------------- */
+.bkg-img{
+  background-image: url(/images/HeroJobs.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  filter:grayscale(1);
+}
+.form-select, .form-control{
+  width: fit-content;
+}
+
+
+
+/* Offers ---------------------------------- */
 .btn-apply{
   background-color: #00b7ff;
   padding: 5px 20px;
@@ -31,10 +47,21 @@ h1 {
   border-radius: 5px;
   color: white;
 }
+
+
+/* Footer -------------------------------------- */
+
+footer{
+  margin-top: 100px;
+  background-color: cadetblue;
+}
 .adz-mini{
   width: 50px;
 }
 
-footer{
-  margin-top: 100px;
+.footer-col1, .footer-col2, .footer-col3{
+  margin-top: 20px;
+}
+.fa-heart{
+  color: red;
 }
