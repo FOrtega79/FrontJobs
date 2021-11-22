@@ -48,6 +48,14 @@ h1 {
   color: white;
 }
 
+/* Signup ----------------------------------------- */
+.center-form{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Footer -------------------------------------- */
 

@@ -1,13 +1,19 @@
-<form action="/auth/login" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
-
-   <button type="submit">Submit</button>
+<div class="center-form">
+<form action="/signup" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelpBlock">
+    <div id="passwordHelpBlock" class="form-text">
+  Must be 8-20 characters long.
+</div>
+  </div>
+  <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
-
+</div>
 
    
