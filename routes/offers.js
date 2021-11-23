@@ -18,9 +18,8 @@ router.get("/", async (req, res, next) => {
   }catch(err){
       console.log("The Error here is: ", err)
   }
-  
-    
 });
+
 
 module.exports = router;
 

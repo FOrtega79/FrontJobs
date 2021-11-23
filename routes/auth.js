@@ -153,4 +153,19 @@ router.get("/logout", isLoggedIn, (req, res) => {
   });
 });
 
+
+
+// LogOut POST ------------------------------------------
+router.get("/logout", (req, res, next)=>{
+  res.clearCookie('connect.sid', {path: '/',})
+
+  try{
+      req.session.destroy()
+      res.redirect("/")
+  }catch(err){
+    console.log("Error occurred: ", err)
+  }
+})
+
+
 module.exports = router;
