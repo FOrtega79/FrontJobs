@@ -34,6 +34,7 @@ const users = require("./routes/user")
 app.use("/user", users)
 
 
+
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 

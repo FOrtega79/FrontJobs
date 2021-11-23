@@ -9,7 +9,7 @@ const API_KEY   = "e17ef6ea7b29a60500f7dd33043d2565"
 router.get("/", async (req, res, next) => {
   try{
       const axiosCall = await axios(
-          "http://api.adzuna.com/v1/api/jobs/es/search/1?app_id=2b6742ea&app_key=e17ef6ea7b29a60500f7dd33043d2565&results_per_page=10&what=front%20end"
+          `http://api.adzuna.com/v1/api/jobs/es/search/1?app_id=2b6742ea&app_key=${process.env.API_KEY}&results_per_page=10&what=front%20end`
       )
       const offersInfo = axiosCall.data.results
         console.log(offersInfo)

@@ -12,6 +12,7 @@ const userSchema = new Schema(
       required: [true, "Can't be blank"],
       match: [/\S+@\S+\.\S+/, "Email not valid"]
     },
+      savedOffers: [String],
   }, {timestamps: true},
 );
 
