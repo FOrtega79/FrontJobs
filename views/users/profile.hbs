@@ -6,3 +6,11 @@
 {{!-- Dustbin font awesome icon --}}
 <h3>Your saved Job Offers:</h3>
 
+{{!-- {{favOffers.[0].description}} --}}
+
+{{#each favOffers}}
+<p>{{this.title}}</p>
+<p>{{this.company.display_name}}</p>
+<p>{{this.description}}</p>
+<a href={{this.redirect_url}} target="_blank" ><button class="btn-apply">Apply</button></a>
+{{/each}}

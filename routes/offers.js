@@ -12,7 +12,7 @@ router.get("/", async (req, res, next) => {
           `http://api.adzuna.com/v1/api/jobs/es/search/1?app_id=2b6742ea&app_key=${process.env.API_KEY}&results_per_page=5&what=front%20end`
       )
       const offersInfo = axiosCall.data.results
-         console.log(offersInfo)
+        //  console.log(offersInfo)
   res.render("offers" , { offersInfo });  
 
   }catch(err){
