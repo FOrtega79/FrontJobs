@@ -1,0 +1,25 @@
+<div class="container">
+<h2>Best Companies with Frontend Jobs </h2>
+{{!-- <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div> --}}
+
+{{#each CompaniesInfo}}
+<div class="card-w50">
+  <div class="card-body">
+    <h5 class="card-title">{{this.canonical_name}}</h5>
+    <p class="card-text">Active offers:{{this.count}}</p>
+    <p class="card-text">Average salary:{{this.average_salary}}</p>
+    <form method="POST" action="companies/saved/{{this.canonical_name}}">
+<button type="submit" class="btn-save">Follow {{this.canonical_name}} </button></a>
+</form>
+<form method="GET" action="https://www.google.com/?q=`${{this.canonical_name}}`+careers">
+<button type="submit" class="btn-save">Visit {{this.canonical_name}} careers site</button></a>
+</form>
+  </div>
+</div>
+{{/each}}
+</div> 

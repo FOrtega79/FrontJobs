@@ -9,8 +9,15 @@
 <p>Salary: {{this.salary_min}} - {{this.salary_max}}</p>
 <p>Description: {{this.description}} </p>
 <a href={{this.redirect_url}} target="_blank" ><button class="btn-apply">Apply</button></a>
-<form>
-<a href=# target="_blank" ><button class="btn-save">Save for later</button></a>
+
+<form method="POST" action="/savedOffers">
+<input type="text" value="{{this.title}}">
+<input type="text" value="{{this.description}}">
+<input type="text" value="{{this.location.display_name}}">
+<input type="number" value="{{this.salary_min}}">
+<input type="number" value="{{this.salary_max}}">
+<input type="text" value="{{this.redirect_url}}">
+<button type="submit" class="btn-save">Save for later</button></a>
 </form>
 {{/each}}
 </div> 

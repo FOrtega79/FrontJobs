@@ -30,6 +30,12 @@ app.use("/", index);
 const offers = require("./routes/offers")
 app.use("/offers", offers)
 
+const savedOffers = require("./routes/savedOffers")
+app.use("/savedOffers", savedOffers)
+
+const companies = require("./routes/companies")
+app.use("/companies", companies)
+
 const users = require("./routes/user")
 app.use("/user", users)
 
