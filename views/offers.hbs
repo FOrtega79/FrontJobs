@@ -1,14 +1,16 @@
 
 <div class="container">
-<h2>Job list...</h2>
+<h2>Frontend job search results:</h2>
 
 {{#each offersInfo}}
+<div class="offer-container">
 <h3>{{this.title}}</h3>
 <h5>Source: {{this.company.display_name}}</h5>
 <p>Location: {{this.location.display_name}} | Published:{{this.created}}</p>
 <p>Salary: {{this.salary_min}} - {{this.salary_max}}</p>
 <p>Description: {{this.description}} </p>
-<a href={{this.redirect_url}} target="_blank" ><button class="btn-apply">Apply</button></a>
+ <a href={{this.redirect_url}} target="_blank"><button
+      class="btn-apply">Apply  <i class="fas fa-external-link-alt"></i></button></a>
 
 <form method="POST" action="/savedOffers/saveOffer">
     <input type="hidden" value="{{this.title}}" name="title">
@@ -17,7 +19,9 @@
     {{!-- <input type="number" value="{{this.salary_min}}" name="minSalary" >
     <input type="number" value="{{this.salary_max}}" name="maxSalary" > --}}
     <input type="hidden" value="{{this.redirect_url}}" name="redirect_url" >
-    <button type="submit" class="btn-save">Save for later</button></a>
+    <button type="submit" class="btn-save">Save for later <i class="far fa-save"></i></button></a>
 </form>
+</div>
 {{/each}}
+
 </div> 

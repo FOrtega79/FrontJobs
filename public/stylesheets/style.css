@@ -24,19 +24,88 @@ h1 {
   height: 40vh;
   filter:grayscale(1);
 }
+
+.center-forms{
+  display: flex;
+  justify-content: center;
+  
+}
 .form-select, .form-control{
   width: fit-content;
+  position: relative;
+  display: inline-flex;
+  margin-top: 0px;
+  
+}
+
+.form-select{
+  margin-right: 20px;
+}
+
+.btn-login{
+  border: solid;
+  border-width: 2px;
+  border-color: #00b7ff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-right: 10px;
+  transition: 0.3s all ease-in-out;
+}
+
+.btn-login:hover{
+  background-color: #00b7ff;
+  border: solid;
+  border-width: 2px;
+  border-color: #00b7ff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+.btn-signup{
+  background-color: #00b7ff;
+  padding: 5px 20px;
+  border-width: 2px;
+  border-color: #00b7ff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s all ease-in-out;
+
+}
+
+.btn-signup:hover{
+  background-color:rgba(255, 255, 255, 0) ;
+  padding: 5px 20px;
+  border-width: 2px;
+  border-color: #00b7ff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color:black;
+}
+
+.img-col1, .img-col2, .img-col3{
+  width: 300px;
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
 }
 
 
-
 /* Offers ---------------------------------- */
+.offer-container{
+  margin-top: 40px;
+}
+
+
 .btn-apply{
   background-color: #00b7ff;
   padding: 5px 20px;
   border: none;
   margin-bottom: 10px;
   border-radius: 5px;
+  color: white;
 }
 
 .btn-save{
@@ -56,6 +125,15 @@ h1 {
   align-items: center;
 }
 
+/* Profile ------------------------------------------ */
+.btn-delete{
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  padding: 3px 8px;
+}
 
 /* Footer -------------------------------------- */
 
