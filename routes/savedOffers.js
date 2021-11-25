@@ -5,9 +5,9 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
+// GET info from the DB and render in the user profile
 router.get("/", async (req, res, next) => {
   const user = req.session.user;
-
   try {
     const userData = await User.findById(user._id).populate("savedOffers");
     res.render("users/profile", { favOffers: userData.savedOffers, user });
@@ -16,6 +16,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+// POST API info to the DB and assign to the user
 router.post("/saveOffer", async (req, res, next) => {
   const { title, description, location, redirect_url } = req.body;
 
@@ -42,5 +43,22 @@ router.post("/saveOffer", async (req, res, next) => {
     console.log(err.message);
   }
 });
+
+
+// Delete a Favorited Offer ----------------------------------------------
+router.post('/deleteOffer', async(req,res) => {
+
+  try {
+    const {offerId} = req.body
+    const deletedOffer = await Offers.findByIdAndDelete(offerId, { new: true });
+    res.redirect('/user/profile')
+  } catch (err) {
+    console.log("Error at DELETE: ", err);
+  }
+})
+
+
+
+
 
 module.exports = router;

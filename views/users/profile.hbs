@@ -8,18 +8,27 @@
     <h5 class="card-title">{{this.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{this.location}}</h6>
     <p class="card-text">{{this.description}}</p>
-    <a href={{this.redirect_url}} target="_blank"><button
-      class="btn-apply">Apply  <i class="fas fa-external-link-alt"></i></button></a>
-    <a href="#" class="card-link"><button
-      class="btn-delete"><i class="far fa-trash-alt"></i></button></a>
+    <a href={{this.redirect_url}} target="_blank"><button class="btn-apply">Apply  <i class="fas fa-external-link-alt"></i></button></a>
+    {{!-- <a class="card-link"> --}}
+      
+      <form action="/savedOffers/deleteOffer" method="POST">
+        <button type="submit" id="delete_fav_offer" class="button-5">
+          <i class="far fa-trash-alt"></i>
+            <input type="hidden" name="offerId" value={{this._id}}> 
+        </button>
+      </form>
+    {{!-- </a> --}}
   </div>
 </div>
 {{/each}}
 
-<a href="/"><button class="btn-save">Search Jobs <i class="fas fa-search"></i></button></a>
-<a href="/auth/logout"><button class="btn-logout">Log out! <i class="fas fa-power-off"></i></button></a>
-{{! power off font awesome icon }}
-<a href="/"><button class="btn-delete">Delete account <i class="fas fa-user-times"></i></button></a>
-{{! Dustbin font awesome icon }}
+<div class="action-btns">
+<a href="/"><button class="button-3">Search Jobs <i class="fas fa-search"></i></button></a>
+<a href="/auth/logout"><button class="button-4">Log out! <i class="fas fa-power-off"></i></button></a>
+
+<form action="/" method="POST">
+<button type="submit" class="button-5">Delete account <i class="fas fa-user-times"></i></button></a>
+</form>
+</div>
 </div>{{!-- end container --}}
 

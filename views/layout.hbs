@@ -13,9 +13,13 @@
    </head>
 
    <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="page-container">
+       <div class="content-wrap">
+         <div class="navbar-flex">
+         <div class="navbar-wrapper">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#457b9d">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">FrontJobs.com</a>
+    <a class="navbar-brand" href="/">FrontJobs</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,20 +27,27 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/offers">Front-end</a>
-        <a class="nav-link" href="#">Back-end</a>
-        <a class="nav-link" href="#">Full Stack</a>
+        <a class="nav-link" href="/offersb">Back-end</a>
+        <a class="nav-link" href="/offersf">Full Stack</a>
+        </div>
+        {{!-- action buttons for the login / sign up / profile --}}
+        <div class="action-btns-wrapper">
+          <div class="navbar-action-btns">
         <a href="/auth/login"><button class="btn-login">Login</button></a>
         <a href="/auth/signup"><button class="btn-signup">Signup</button></a>
         <a href="/savedOffers"><button class="btn-login">Profile</button></a>
-        
+          </div>
+        </div>
       </div>
     </div>
+  </div>
   </div>
 </nav>
 
       {{{body}}}
 
      
+</div>{{!-- end content wrap --}}
 
 <footer>
   <div class="container">
@@ -60,6 +71,9 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       <script src="/js/script.js"></script>
+   
+   </div>{{!-- end page container --}}
+   
    </body>
 
 </html>

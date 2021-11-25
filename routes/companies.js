@@ -20,18 +20,5 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// router.post("/saved/:form", async (req, res)=>{
-//   console.log(req.params)
-//   try{
-//   const axiosCall = await axios(`https://api.adzuna.com/v1/api/jobs/gb/top_companies?app_id=2b6742ea&app_key=e17ef6ea7b29a60500f7dd33043d2565&what=front%20end`)
-
-//   const infoSavedCompany = axiosCall.data.leaderboard
-//   console.log(infoSavedCompany)
-  
-
-//   }catch(err){
-//   console.log("Saved Company error is...", err)
-//   }
-// })
 
 module.exports = router;
