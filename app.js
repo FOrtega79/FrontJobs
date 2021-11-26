@@ -27,6 +27,7 @@ app.locals.title = `${capitalized(projectName)} your FrontEnd Jobs`;
 const index = require("./routes/index");
 app.use("/", index);
 
+// Routes for offers = front  offersb = back and offersf= fullstack
 const offers = require("./routes/offers")
 app.use("/offers", offers)
 
@@ -36,16 +37,25 @@ app.use("/offersb", offersb)
 const offersf = require("./routes/offersf")
 app.use("/offersf", offersf)
 
+
+// Route for saved offers and render in the user profile
 const savedOffers = require("./routes/savedOffers")
 app.use("/savedOffers", savedOffers)
 
+
+// Route for top companies with Frontend / backend / fullstack
 const companies = require("./routes/companies")
 app.use("/companies", companies)
 
+const companiesb = require("./routes/companiesb")
+app.use("/companiesb", companiesb)
+
+const companiesf = require("./routes/companiesf")
+app.use("/companiesf", companiesf)
+
+
 const users = require("./routes/user")
 app.use("/user", users)
-
-
 
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);

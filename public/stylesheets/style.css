@@ -2,7 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  height: 100%;
+  min-height: 100vh;
 }
 
 a {
@@ -28,14 +28,21 @@ h1 {
 }
 
 .center-forms{
-  
   justify-content: center;
-  
 }
+
+.margin-footer{
+  min-height: 65.8vh;
+}
+
+.margin-footer-profile{
+  min-height: 68.5vh;
+}
+
+
 .form-select, .form-control{
   width: fit-content;
   position: relative;
- 
   
 }
 
@@ -48,7 +55,7 @@ h1 {
   border-width: 2px;
   border-color: #00b7ff;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 6px 16px;
   margin-right: 10px;
   transition: 0.3s all ease-in-out;
 }
@@ -59,7 +66,7 @@ h1 {
   border-width: 2px;
   border-color: #00b7ff;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 6px 16px;
   margin-right: 10px;
   color: white;
 }
@@ -77,13 +84,17 @@ h1 {
 }
 
 .btn-signup:hover{
-  background-color:rgba(255, 255, 255, 0) ;
+  background-color:white ;
   padding: 5px 20px;
   border-width: 2px;
   border-color: #00b7ff;
   margin-bottom: 10px;
   border-radius: 5px;
   color:black;
+}
+
+.rows-wrapper{
+  margin-top: 50px;
 }
 
 .img-col1, .img-col2, .img-col3{
@@ -93,7 +104,7 @@ h1 {
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   transition: 0.2s all ease-in;
   
 }
@@ -155,6 +166,9 @@ h1 {
   color: white;
 }
 
+.margin-companies-buttons{
+  margin-bottom: 10px;
+}
 
 
 /* Signup ----------------------------------------- */
@@ -177,6 +191,8 @@ footer{
   margin-top: 100px;
   background-color: #1d3557;
   color: white;
+  margin-bottom: 0px;
+  
 }
 .adz-mini{
   width: 50px;

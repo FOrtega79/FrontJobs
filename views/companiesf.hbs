@@ -1,8 +1,8 @@
 <div class="container">
-<h2>Top Companies with Front-end Jobs </h2>
+<h2>Top Companies with Full-Stack Jobs </h2>
 
 <div class="row align-items-center">
-{{#each CompaniesInfo}}
+{{#each CompaniesInfof}}
 
 <div class="card" style="width: 50%;">
   <div class="card-body">
@@ -10,10 +10,10 @@
     <p class="card-text">Active offers:{{this.count}}</p>
     <p class="card-text">Average salary:{{this.average_salary}}</p>
     <div class="margin-companies-buttons">
- <a href="/companies"><button type="submit" class="button-3">Follow {{this.canonical_name}} </button></a>
+ <a href="/companiesf"><button type="submit" class="button-3">Follow {{this.canonical_name}} </button></a>
 </div>
-<form method="GET" action="https://www.google.com/?q=`${{this.canonical_name}}`">
-<button type="submit" class="btn-login">Visit {{this.canonical_name}} careers site <i class="fas fa-external-link-alt"></i></button></a>
+<form method="GET" action="https://www.google.com/?q=`${{this.canonical_name}}`+careers">
+<button type="submit" class="btn-signup">Visit {{this.canonical_name}} careers site <i class="fas fa-external-link-alt"></i></button></a>
 </form>
   </div>
 </div>

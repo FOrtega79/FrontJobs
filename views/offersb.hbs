@@ -10,7 +10,7 @@
 <p>Salary: {{this.salary_min}} - {{this.salary_max}}</p>
 <p>Description: {{this.description}} </p>
  <a href={{this.redirect_url}} target="_blank"><button
-      class="btn-apply">Apply  <i class="fas fa-external-link-alt"></i></button></a>
+      class="btn-signup">Apply  <i class="fas fa-external-link-alt"></i></button></a>
 
 <form method="POST" action="/savedOffers/saveOffer">
     <input type="hidden" value="{{this.title}}" name="title">

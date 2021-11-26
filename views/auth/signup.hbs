@@ -1,3 +1,5 @@
+<div class="margin-footer">
+
 <div class="center-form">
 
 <form action="/auth/signup" method="POST">
@@ -22,9 +24,10 @@
 </form>
 </div>
 <div class="center-form">
-Already have an account? Log in
+<p>Already have an account? <a href="/auth/login"> Log in</a></p>
 </div>
 
    {{#if errorMessage}}
   <p>{{errorMessage}}</p>
 {{/if}}
+</div>
