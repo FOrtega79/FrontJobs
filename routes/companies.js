@@ -9,10 +9,9 @@ const API_KEY   = "e17ef6ea7b29a60500f7dd33043d2565"
 router.get("/", async (req, res, next) => {
   try{
       const axiosCall = await axios(
-          `https://api.adzuna.com/v1/api/jobs/gb/top_companies?app_id=2b6742ea&app_key=e17ef6ea7b29a60500f7dd33043d2565&what=front%20end`
+          `https://api.adzuna.com/v1/api/jobs/es/top_companies?app_id=2b6742ea&app_key=e17ef6ea7b29a60500f7dd33043d2565&what=full%20stack`
       )
       const CompaniesInfo = axiosCall.data.leaderboard
-         console.log(CompaniesInfo)
   res.render("companies" , { CompaniesInfo });  
 
   }catch(err){

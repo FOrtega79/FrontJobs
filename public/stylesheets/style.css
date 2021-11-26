@@ -2,6 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
 }
 
 a {
@@ -27,15 +28,14 @@ h1 {
 }
 
 .center-forms{
-  display: flex;
+  
   justify-content: center;
   
 }
 .form-select, .form-control{
   width: fit-content;
   position: relative;
-  display: inline-flex;
-  margin-top: 0px;
+ 
   
 }
 
@@ -87,12 +87,25 @@ h1 {
 }
 
 .img-col1, .img-col2, .img-col3{
-  width: 300px;
+  width: 100%;
   border-width: 1px;
   border-color: grey;
   border-style: solid;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s all ease-in;
+  
 }
 
+.img-col1:hover, .img-col2:hover, .img-col3:hover{
+  display: flex;
+  filter: blur(2px);
+}
+
+.banner-text{
+ justify-content: center;
+}
 
 /* Offers ---------------------------------- */
 .offer-container{
@@ -118,6 +131,32 @@ h1 {
   color: white;
 }
 
+/* Companies ---------------------------------------------------- */
+.btn-banner{
+  border: solid;
+  width: 100%;
+  border-width: 2px;
+  border-color: #00b7ff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s all ease-in-out;
+}
+
+.btn-banner:hover{
+  background-color: #00b7ff;
+  border: solid;
+  border-width: 2px;
+  border-color: #00b7ff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+
+
 /* Signup ----------------------------------------- */
 .center-form{
   margin-top: 25px;
@@ -141,6 +180,14 @@ footer{
 }
 .adz-mini{
   width: 50px;
+  margin-left: 10px;
+}
+
+.footer-text{
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .footer-col1, .footer-col2, .footer-col3{
